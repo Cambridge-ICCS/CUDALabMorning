@@ -6,11 +6,6 @@
 //The number of character in the encrypted text
 #define N 1024
 
-//Decryption values
-#define A 111
-#define B 27
-#define M 127
-
 void checkCUDAError(const char*);
 void read_encrypted_file(int*);
 
