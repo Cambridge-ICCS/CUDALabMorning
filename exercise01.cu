@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 	affine_decrypt_multiblock << <blocksPerGrid, threadsPerBlock >> >(d_input, d_output);
 
 	/* wait for all threads to complete */
-	cudaThreadSynchronize();
+	cudaDeviceSynchronize();
 	checkCUDAError("Kernel execution");
 
 	/* copy the gpu output back to the host */
